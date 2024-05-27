@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buyer Dashboard - Rentify</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-container">
+            <h1 class="logo">Rentify</h1>
+            <nav class="nav">
+                <a href="{{ url_for('logout') }}">Logout</a>
+            </nav>
+        </div>
+    </header>
+    <div class="flex-container">
+        <h2 class="h2form">Available Properties</h2>
+        <main class="form">
+            <div class="properties-grid">
+                <ul class="properties-list">
+                    {% for property in properties %}
+                    <li class="property-item">
+                        {% if property.image %}
+                        <img src="{{ url_for('static', filename='uploads/' ~ property.image) }}" alt="Property Image"
+                            width="200">
+                        {% endif %}
+                        <p>{{ property.place }} - {{ property.area }} sq ft</p>
+                        <a class="btn" href="{{ url_for('interested', property_id=property.id) }}">I'm Interested</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

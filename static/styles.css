@@ -1,0 +1,202 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background: url('/static/images/bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Half-transparent black */
+    z-index: 1;
+}
+
+/* Flexbox container for centering content */
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    z-index: 2;
+}
+
+/* Header styles */
+.header {
+    background-color: rgba(51, 51, 51, 0.8);
+    color: white;
+    padding: 1em 0;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 3;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+.logo {
+    margin: 0;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 1em;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main content styles */
+.main-content {
+    text-align: center;
+    padding: 4em 1em;
+    background-color: rgba(0, 0, 0, 0.8); /* semi-transparent background */
+    border-radius: 8px;
+    max-width: 1200px;
+    margin: 2em auto;
+}
+
+h2 {
+    color: #fff; /* Change text color to white */
+    margin-bottom: 1em;
+}
+
+p {
+    color: #fff; /* Change text color to white */
+    font-size: 1.2em;
+}
+
+/* Button styles */
+.btn {
+    background-color: #29636b;
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    margin: 1em;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: #173b40;
+}
+
+/* Properties grid styles */
+/* Properties grid styles */
+.properties-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+    margin-top: 2em;
+}
+
+.property-item {
+    display: inline-block;
+    vertical-align: top;
+    background-color: rgba(0, 0, 0, 0.9); /* semi-transparent white background */
+    padding: 1em;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 300px; /* Limit width of property card */
+    margin: 0 1em 1em 0; /* Add margin for spacing between items */
+}
+
+.property-item img {
+    width: 100%; /* Fill the container width */
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 1em;
+}
+
+.property-item p {
+    color: white;
+    margin: 0.5em 0;
+}
+.property-card {
+    background-color: rgba(0, 0, 0, 0.8); /* semi-transparent white background */
+    padding: 1em;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 300px; /* Limit width of property card */
+    margin: 0 auto; /* Center property cards */
+}
+
+.property-card img {
+    width: 100%; /* Fill the container width */
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 1em;
+}
+
+.property-card p {
+    color: white;
+    margin: 0.5em 0;
+}
+
+.property-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 0.5em;
+}
+form {
+    background-color: rgba(0, 0, 0, 0.8); /* semi-transparent background */
+    padding: 2em;
+    border-radius: 8px;
+}
+form label{
+    color: white;
+}
+.probtn {
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Horizontally center-align */
+    align-items: center; /* Vertically center-align */
+    height: 100px; /* Example height, adjust as needed */
+}
+
+
+/* Input field styles */
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="submit"] {
+    width: 100%;
+    padding: 0.5em;
+    margin: 0.5em 0;
+    border-radius: 4px;
+    border: 1px solid #000; /* Set border color to black */
+    box-sizing: border-box;
+    color: #000; /* Set text color to black */
+    background-color: #fff; /* Set background color to white */
+}
+
+input[type="submit"] {
+    background-color: #29636b;
+    color: white;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #173b40;
+}
+.h2form{
+    text-align: center;
+}

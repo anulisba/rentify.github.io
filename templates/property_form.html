@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Property - Rentify</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-container">
+            <h1 class="logo">Rentify</h1>
+            <nav class="nav">
+                <a href="{{ url_for('logout') }}">Logout</a>
+            </nav>
+        </div>
+    </header>
+    <div class="flex-container">
+        <main>
+            <h2 class="h2form">Post a Property</h2>
+            <form method="POST" enctype="multipart/form-data" class="form-container">
+                {{ form.hidden_tag() }}
+                <div>
+                    {{ form.place.label }} {{ form.place(size=32) }}
+                </div>
+                <div>
+                    {{ form.area.label }} {{ form.area(size=32) }}
+                </div>
+                <div>
+                    {{ form.bedrooms.label }} {{ form.bedrooms(size=32) }}
+                </div>
+                <div>
+                    {{ form.bathrooms.label }} {{ form.bathrooms(size=32) }}
+                </div>
+                <div>
+                    {{ form.hospitals.label }} {{ form.hospitals(size=32) }}
+                </div>
+                <div>
+                    {{ form.colleges.label }} {{ form.colleges(size=32) }}
+                </div>
+                <div>
+                    {{ form.image.label }} {{ form.image() }}
+                </div>
+                <div>
+                    <input type="submit" value="Post Property">
+                </div>
+            </form>
+        </main>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rentify - Where Renting Meets Simplicity</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-container">
+            <h1 class="logo">Rentify</h1>
+            <nav class="nav">
+                <a href="{{ url_for('index') }}">Home</a>
+            </nav>
+        </div>
+    </header>
+    <div class="flex-container">
+        <main class="main-content">
+            <h2>Welcome to Rentify</h2>
+            <p>Your one-stop solution for renting properties easily and efficiently.</p>
+            <div class="auth-buttons">
+                <a href="{{ url_for('login') }}" class="btn">Login</a>
+                <a href="{{ url_for('register') }}" class="btn">Register</a>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Rentify</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-container">
+            <h1 class="logo">Rentify</h1>
+            <nav class="nav">
+                <a href="{{ url_for('buyer_dashboard') }}">Back to Dashboard</a>
+                <a href="{{ url_for('logout') }}">Logout</a>
+            </nav>
+        </div>
+    </header>
+    <div class="flex-container">
+    <main class="main-content">
+        <h2>Property Details</h2>
+        <p>Place: {{ property.place }},  Area: {{ property.area }} sq ft</p>
+        <p>Bedrooms: {{ property.bedrooms }},    Bathrooms: {{ property.bathrooms }}</p>
+        <p>Hospitals: {{ property.hospitals }},  colleges: {{ property.colleges }}</p>
+
+        <h2>Seller Details</h2>
+        <p>Name: {{ seller.first_name }} {{ seller.last_name }}</p>
+        <p>Email: {{ seller.email }}</p>
+        <p>Phone: {{ seller.phone_number }}</p>
+    </main>
+        </div>
+</body>
+</html>
